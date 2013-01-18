@@ -7,9 +7,19 @@
  */
 var Hapi = require('hapi')
 
-// Create Hapi server
-var http = new Hapi.Server('0.0.0.0', 8080)
+// Configure views
+var options = {
+    views: {
+        path: __dirname + '/views',
+        engine: {
+            module: 'jade'
+        }
+    }
+}
 
-require('./lib/routes')
+// Create Hapi server
+var http = new Hapi.Server(8080, options)
+
+require('./lib/routes').configureRoutes(http)
 
 http.start()

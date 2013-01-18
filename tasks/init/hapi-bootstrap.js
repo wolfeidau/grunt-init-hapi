@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2012 Mark Wolfe
  * Licensed under the MIT license.
- * https://github.com/wolfeidau/grunt-express-bootstrap/blob/master/LICENSE-MIT
+ * https://github.com/wolfeidau/hapi-bootstrap/blob/master/LICENSE-MIT
  */
 
 // Basic template description.
@@ -19,7 +19,7 @@ exports.warnOn = '*'
 // The actual init template.
 exports.template = function(grunt, init, done) {
 
-    grunt.helper('prompt', {type: 'grunt-express-bootstrap'}, [
+    grunt.helper('prompt', {type: 'hapi-bootstrap'}, [
         // Prompt for these values.
         grunt.helper('prompt_for', 'name'),
         grunt.helper('prompt_for', 'description'),

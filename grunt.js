@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     grunt.initConfig({
 
         lint: {
-            files: ["grunt.js", "bin/grunt-express-bootstrap", "tasks/init/grunt-express-bootstrap.js"]
+            files: ["grunt.js", "bin/hapi-bootstrap", "tasks/init/hapi-bootstrap.js"]
         },
 
         jshint: {
@@ -31,6 +31,6 @@ module.exports = function (grunt) {
     })
 
     // Default task.
-    grunt.registerTask('default', 'lint test')
+    grunt.registerTask('default', 'lint')
 
 }

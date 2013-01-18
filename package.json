@@ -1,35 +1,36 @@
 {
-  "name": "hapi-bootstrap",
-  "description": "Bootstrap a project using hapi, bower and Twitter Bootstrap using grunt.",
-  "version": "0.1.0",
-  "homepage": "https://github.com/markw/hapi-bootstrap",
-  "author": {
-    "name": "Mark Wolfe",
-    "email": "mark@wolfe.id.au",
-    "url": "http://www.wolfe.id.au/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/markw/hapi-bootstrap.git"
-  },
-  "bugs": {
-    "url": "https://github.com/markw/hapi-bootstrap/issues"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/markw/hapi-bootstrap/blob/master/LICENSE-MIT"
-    }
-  ],
-  "main": "lib/hapi-bootstrap",
-  "engines": {
-    "node": ">= 0.6.0"
-  },
-  "scripts": {
-    "test": "grunt test"
-  },
-  "devDependencies": {
-    "grunt": "~0.3.17"
-  },
-  "keywords": []
+    "name": "hapi-bootstrap",
+    "description": "Bootstrap a project using hapi, bower and Twitter Bootstrap using grunt.",
+    "version": "0.1.0",
+    "homepage": "https://github.com/wolfeidau/hapi-bootstrap",
+    "author": {
+        "name": "Mark Wolfe",
+        "email": "mark@wolfe.id.au",
+        "url": "http://www.wolfe.id.au/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/wolfeidau/hapi-bootstrap.git"
+    },
+    "bugs": {
+        "url": "https://github.com/wolfeidau/hapi-bootstrap/issues"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/wolfeidau/hapi-bootstrap/blob/master/LICENSE-MIT"
+        }
+    ],
+    "main": "grunt.js",
+    "bin": "bin/hapi-bootstrap",
+    "engines": {
+        "node": ">= 0.6.0"
+    },
+    "dependencies": {
+        "grunt": "~0.3.17"
+    },
+    "devDependencies": {
+        "grunt": "~0.3.17"
+    },
+    "keywords": ["gruntplugin", "bootstrap"]
 }

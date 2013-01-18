@@ -6,13 +6,25 @@
  * Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.
  */
 
-// Serve the public folder with listing enabled
-http.addRoute({
-    method: 'GET',
-    path: '/{path*}',
-    handler: {
-        directory: {
-            path: './public/'
+exports.configureRoutes = function (http) {
+
+    // Serve the public folder with listing enabled
+    http.addRoute({
+        method: 'GET',
+        path: '/{path*}',
+        handler: {
+            directory: {
+                path: './public/'
+            }
         }
+    })
+
+    var rootHandler = function (request) {
+
+        request.reply.view('layout', {
+            title: '{%= name %} | Hapi ' + Hapi.utils.version()
+        }).send()
     }
-})
+
+    server.addRoute({ method: 'GET', path: '/', handler: rootHandler });
+}
