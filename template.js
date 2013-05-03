@@ -49,6 +49,9 @@ exports.template = function(grunt, init, done) {
       'grunt-contrib-uglify': '~0.1.1',
       'grunt-contrib-jshint': '~0.1.1',
       'grunt-contrib-watch': '~0.2.0',
+      'mocha': '*',
+      'chai': '*',
+      'sinon': '*',
       'grunt-simple-mocha': '*'
     }
 
