@@ -6,13 +6,13 @@
  * Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.
  */
 var Hapi = require('hapi')
+    , Path = require('path')
 
 // Configure views
 var options = {
     views: {
-        path: __dirname + '/views',
-        engine: {
-            module: 'jade'
+        path: Path.join(__dirname, 'views'), engine: {
+            module: 'jade', extension: 'jade'
         }
     }
 }
