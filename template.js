@@ -40,8 +40,8 @@ exports.template = function(grunt, init, done) {
 
     // specify the project dependencies.
     props.dependencies = {
-      "hapi": "*",
-      "jade": "*"
+      "hapi": "~1.0.2",
+      "jade": "~0.30.0"
     }
 
     props.devDependencies = {
@@ -49,10 +49,10 @@ exports.template = function(grunt, init, done) {
       'grunt-contrib-uglify': '~0.1.1',
       'grunt-contrib-jshint': '~0.1.1',
       'grunt-contrib-watch': '~0.2.0',
-      'mocha': '*',
-      'chai': '*',
-      'sinon': '*',
-      'grunt-simple-mocha': '*'
+      'mocha': '~1.9.0',
+      'chai': '~1.6.0',
+      'sinon': '~1.6.0',
+      'grunt-cafe-mocha': '~0.4.0'
     }
 
     // Files to copy (and process).

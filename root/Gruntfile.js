@@ -29,8 +29,11 @@ module.exports = function(grunt) {
         dest: 'dist/<%= pkg.name %>.min.js'
       }
     },
-    nodeunit: {
-      files: ['test/**/*_test.js']
+    cafemocha: {
+      src: 'test/**/*.js',
+      options: {
+        ui: 'bdd'
+      }
     },
     jshint: {
       options: {
@@ -40,12 +43,12 @@ module.exports = function(grunt) {
         src: 'Gruntfile.js'
       },
       lib: {
-        options: {
-          jshintrc: 'lib/.jshintrc'
-        },
         src: ['lib/**/*.js']
       },
       test: {
+        options: {
+          jshintrc: 'lib/.jshintrc'
+        },
         src: ['test/**/*.js']
       }
     },
@@ -56,11 +59,11 @@ module.exports = function(grunt) {
       },
       lib: {
         files: '<%= jshint.lib.src %>',
-        tasks: ['jshint:lib', 'simplemocha']
+        tasks: ['jshint:lib', 'cafemocha']
       },
       test: {
         files: '<%= jshint.test.src %>',
-        tasks: ['jshint:test', 'simplemocha']
+        tasks: ['jshint:test', 'cafemocha']
       }
     }
   })
@@ -72,9 +75,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch')
 
   // mocha tasks
-  grunt.loadNpmTasks('grunt-simple-mocha')
+  grunt.loadNpmTasks('grunt-cafe-mocha')
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'simplemocha', 'concat', 'uglify'])
+  grunt.registerTask('default', ['jshint', 'cafemocha', 'concat', 'uglify'])
 
 }
