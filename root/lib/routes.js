@@ -6,10 +6,10 @@
  * Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.
  */
 
-exports.configureRoutes = function (http) {
+exports.configureRoutes = function (server) {
 
     // Serve the public folder with listing enabled
-    http.addRoute({
+    server.addRoute({
         method: 'GET',
         path: '/{path*}',
         handler: {

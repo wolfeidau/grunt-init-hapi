@@ -18,8 +18,8 @@ var options = {
 }
 
 // Create Hapi server
-var http = new Hapi.Server(8080, options)
+var server = Hapi.createServer('localhost', 8000, options)
 
-require('./lib/routes').configureRoutes(http)
+require('./lib/routes').configureRoutes(server)
 
 http.start()
