@@ -9,7 +9,7 @@ module.exports = function(grunt) {
       '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
       '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
       ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
-    // Task configuration.
+    // left concat here to remind people to use it at some stage for their app assets
     concat: {
       options: {
         banner: '<%= banner %>',
@@ -20,6 +20,7 @@ module.exports = function(grunt) {
         dest: 'dist/<%= pkg.name %>.js'
       }
     },
+    // left uglify here to remind people to use it at some stage for their app assets
     uglify: {
       options: {
         banner: '<%= banner %>'
@@ -78,6 +79,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-cafe-mocha')
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'cafemocha', 'concat', 'uglify'])
+  grunt.registerTask('default', ['jshint', 'cafemocha'])
 
 }
