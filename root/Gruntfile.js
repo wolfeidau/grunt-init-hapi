@@ -33,7 +33,7 @@ module.exports = function(grunt) {
     bower: {
       install: {
         options: {
-          targetDir: './public'
+          targetDir: './public/components'
         }
       }
     },
