@@ -30,6 +30,13 @@ module.exports = function(grunt) {
         dest: 'dist/<%= pkg.name %>.min.js'
       }
     },
+    bower: {
+      install: {
+        options: {
+          install: false
+        }
+      }
+    },
     cafemocha: {
       src: 'test/**/*.js',
       options: {
@@ -48,7 +55,7 @@ module.exports = function(grunt) {
       },
       test: {
         options: {
-          jshintrc: 'lib/.jshintrc'
+          jshintrc: 'test/.jshintrc'
         },
         src: ['test/**/*.js']
       }
@@ -77,8 +84,10 @@ module.exports = function(grunt) {
 
   // mocha tasks
   grunt.loadNpmTasks('grunt-cafe-mocha')
+  grunt.loadNpmTasks('grunt-bower-task')
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'cafemocha'])
+  grunt.registerTask('default', ['bower:install', 'jshint', 'cafemocha'])
+  grunt.registerTask('test', ['jshint', 'cafemocha'])
 
 }
