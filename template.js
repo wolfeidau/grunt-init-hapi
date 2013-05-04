@@ -40,7 +40,7 @@ exports.template = function(grunt, init, done) {
 
     // specify the project dependencies.
     props.dependencies = {
-      "hapi": "~1.0.2",
+      "hapi": "git://github.com/wolfeidau/hapi.git#fixes_for_jade_views",
       "jade": "~0.30.0"
     }
 
