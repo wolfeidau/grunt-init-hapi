@@ -14,5 +14,6 @@
   "boss": true,
   "eqnull": true,
   "node": true,
+  "laxcomma": true,
   "es5": true
 }

@@ -6,8 +6,14 @@ These project include:
 
 * [hapi](https://github.com/walmartlabs/hapi)
 * [twitter bootstrap](http://twitter.github.com/bootstrap/)
-* [JQuery](http://jquery.com/)
+* [Grunt 0.4](http://gruntjs.com/)
 * [bower](http://twitter.github.com/bower/)
+
+For server side testing it uses:
+
+* [mocha](http://visionmedia.github.io/mocha/)
+* [chai](http://chaijs.com/)
+* [sinon](http://sinonjs.org/)
 
 ## Getting Started
 
@@ -19,16 +25,22 @@ Once created you can set up your web application project by running the followin
 npm install
 ```
 
-* Run bower to install UI dependencies.
+* Run grunt to install UI dependencies and run tests.
 
 ```
-bower install
+grunt
 ```
 
 * Start the application.
 
 ```
 node app.js
+```
+
+* To just run jshint and tests
+
+```
+grunt test
 ```
 
 ## Contributing

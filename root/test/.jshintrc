@@ -14,5 +14,14 @@
   "boss": true,
   "eqnull": true,
   "node": true,
-  "es5": true
+  "es5": true,
+  "laxcomma": true,
+  "predef": [
+    "describe",
+    "it",      
+    "before",  
+    "beforeEach",
+    "after",   
+    "afterEach"
+  ]
 }
