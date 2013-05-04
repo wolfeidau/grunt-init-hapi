@@ -20,12 +20,21 @@ exports.configureRoutes = function (server) {
         }
     })
 
-    var rootHandler = function (request) {
+  var rootHandler = function (request) {
 
-        request.reply.view('layout', {
-            title: '{%= name %} | Hapi ' + Hapi.utils.version()
-        }).send()
-    }
+    request.reply.view('index', {
+      title: '{%= name %}', message: 'Welcome to {%= name %}.', version: Hapi.utils.version()
+    })
+  }
 
-    server.addRoute({ method: 'GET', path: '/', handler: rootHandler });
+  var aboutHandler = function (request) {
+
+    request.reply.view('index', {
+      title: '{%= name %}', message: 'About {%= name %}.', version: Hapi.utils.version()
+    })
+  }
+
+  server.addRoute({ method: 'GET', path: '/', handler: rootHandler })
+  server.addRoute({ method: 'GET', path: '/about', handler: aboutHandler })
+
 }

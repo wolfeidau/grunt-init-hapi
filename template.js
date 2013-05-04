@@ -52,7 +52,7 @@ exports.template = function(grunt, init, done) {
       'mocha': '~1.9.0',
       'chai': '~1.6.0',
       'sinon': '~1.6.0',
-      'grunt-cafe-mocha': '~0.4.0'
+      'grunt-cafe-mocha': '~0.1.3'
     }
 
     // Files to copy (and process).

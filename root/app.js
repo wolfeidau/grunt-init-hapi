@@ -14,9 +14,10 @@ server.views({
   engines: {
     jade: 'jade'
   },
-  path: '/views'
+  path: './views',
+  isCached: false // disabled for development
 })
 
 require('./lib/routes').configureRoutes(server)
 
-http.start()
+server.start()
